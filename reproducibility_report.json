@@ -1,0 +1,93 @@
+{
+  "seed": 20261022,
+  "identical": true,
+  "details": {
+    "Plant": {
+      "rows_run1": 1,
+      "rows_run2": 1,
+      "sha256_run1": "689460a7a5a5cc77450180fed2ffbae839582de473facf667dacbc9ed304d767",
+      "sha256_run2": "689460a7a5a5cc77450180fed2ffbae839582de473facf667dacbc9ed304d767",
+      "identical": true
+    },
+    "Meter": {
+      "rows_run1": 20,
+      "rows_run2": 20,
+      "sha256_run1": "00489fb486b354666446e4309b0374866cc97eae79d5d2e58532d6c75c282d45",
+      "sha256_run2": "00489fb486b354666446e4309b0374866cc97eae79d5d2e58532d6c75c282d45",
+      "identical": true
+    },
+    "Machine": {
+      "rows_run1": 28,
+      "rows_run2": 28,
+      "sha256_run1": "5000ba176ed3a8027312b7746693131f1b5c7940743d889f63fb2ab263c01ac9",
+      "sha256_run2": "5000ba176ed3a8027312b7746693131f1b5c7940743d889f63fb2ab263c01ac9",
+      "identical": true
+    },
+    "Shift": {
+      "rows_run1": 3,
+      "rows_run2": 3,
+      "sha256_run1": "9c12d86d6fe5d682283898c48d9142f31314eae1b39efa7cd40ea7aaecc6205b",
+      "sha256_run2": "9c12d86d6fe5d682283898c48d9142f31314eae1b39efa7cd40ea7aaecc6205b",
+      "identical": true
+    },
+    "Tariff": {
+      "rows_run1": 4,
+      "rows_run2": 4,
+      "sha256_run1": "59c77e441c7d9c552a03cb5a6182e3f6f8d0b5280de3d5219236ba87cee86f3f",
+      "sha256_run2": "59c77e441c7d9c552a03cb5a6182e3f6f8d0b5280de3d5219236ba87cee86f3f",
+      "identical": true
+    },
+    "WeatherObservation": {
+      "rows_run1": 2160,
+      "rows_run2": 2160,
+      "sha256_run1": "2324f80035606e8cfd8475f686ce1df54f10d355bc46912abb8109fa3058462b",
+      "sha256_run2": "2324f80035606e8cfd8475f686ce1df54f10d355bc46912abb8109fa3058462b",
+      "identical": true
+    },
+    "ProductionBatch": {
+      "rows_run1": 2000,
+      "rows_run2": 2000,
+      "sha256_run1": "d744180df508e231c74adbfe9cb041ae9b014bebb850a523e22ebb1e12ea0d81",
+      "sha256_run2": "d744180df508e231c74adbfe9cb041ae9b014bebb850a523e22ebb1e12ea0d81",
+      "identical": true
+    },
+    "EnergyReading": {
+      "rows_run1": 172789,
+      "rows_run2": 172789,
+      "sha256_run1": "cc4487115b72555dfa4da5f43e400cade138054f744bcb97af7eb3e8801d9078",
+      "sha256_run2": "cc4487115b72555dfa4da5f43e400cade138054f744bcb97af7eb3e8801d9078",
+      "identical": true
+    },
+    "MaintenanceEvent": {
+      "rows_run1": 14,
+      "rows_run2": 14,
+      "sha256_run1": "fa85118de60fc0515b5a7eb35307e7201b02baafbe1edb2bc9c19674de0deb3e",
+      "sha256_run2": "fa85118de60fc0515b5a7eb35307e7201b02baafbe1edb2bc9c19674de0deb3e",
+      "identical": true
+    },
+    "Recommendation": {
+      "rows_run1": 13,
+      "rows_run2": 13,
+      "sha256_run1": "b7f537287d942f2969b87857543cfd05bb192a822aa4133c5bd1db7dd0a3ce90",
+      "sha256_run2": "b7f537287d942f2969b87857543cfd05bb192a822aa4133c5bd1db7dd0a3ce90",
+      "identical": true
+    },
+    "MeterDailyTotal": {
+      "rows_run1": 1800,
+      "rows_run2": 1800,
+      "sha256_run1": "59932ad1048d95d36b1a293649e206d6c5274edc29dc068424160f68d6ea7985",
+      "sha256_run2": "59932ad1048d95d36b1a293649e206d6c5274edc29dc068424160f68d6ea7985",
+      "identical": true
+    },
+    "output/ground_truth.csv": {
+      "sha256_run1": "3e0959844184b1c0876668d9276e841fc9c41b0cefd17c6cf2012b86204a8dc5",
+      "sha256_run2": "3e0959844184b1c0876668d9276e841fc9c41b0cefd17c6cf2012b86204a8dc5",
+      "identical": true
+    },
+    "validation_summary.json": {
+      "sha256_run1": "10b5f3ee7ad939226071a95d19561219759db66527f8f94149c9748f12df0926",
+      "sha256_run2": "10b5f3ee7ad939226071a95d19561219759db66527f8f94149c9748f12df0926",
+      "identical": true
+    }
+  }
+}
