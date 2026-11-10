@@ -1,0 +1,131 @@
+{
+  "seed": 20261022,
+  "generated_at": "2026-11-10T05:39:11.616064Z",
+  "files": [
+    {
+      "path": "output\\ground_truth.csv",
+      "sha256": "1be3763dd278c0458d375a952dd3511399b2aecbdac5ccef64e26f9f4c67fdfd",
+      "bytes": 25729
+    },
+    {
+      "path": "output\\ground_truth.json",
+      "sha256": "fb61fd2624535784ae877ecb5103ee0d633cad97190e88a353c9221c5c961ba1",
+      "bytes": 45836
+    },
+    {
+      "path": "raw\\EnergyReading.csv",
+      "sha256": "c9c3f69f04d5602b6993dfbbff107da05a1e169807fad3967b9e692e47e36790",
+      "bytes": 32206799
+    },
+    {
+      "path": "raw\\EnergyReading.json",
+      "sha256": "7d3035e3dd073140bd9cd7494f207fdc412c5cdb0c437cc087e6054ef6c5782c",
+      "bytes": 85080088
+    },
+    {
+      "path": "raw\\Machine.csv",
+      "sha256": "5000ba176ed3a8027312b7746693131f1b5c7940743d889f63fb2ab263c01ac9",
+      "bytes": 2744
+    },
+    {
+      "path": "raw\\Machine.json",
+      "sha256": "33ea33c0ba2aa6dda9568b1e2ba3f85d96bb27b7c5932d5a2758ccd80ad8923c",
+      "bytes": 8466
+    },
+    {
+      "path": "raw\\MaintenanceEvent.csv",
+      "sha256": "fa85118de60fc0515b5a7eb35307e7201b02baafbe1edb2bc9c19674de0deb3e",
+      "bytes": 2418
+    },
+    {
+      "path": "raw\\MaintenanceEvent.json",
+      "sha256": "3a915ef148ad66d907113d80df2348d50f97688404f3998a86677794454ba11c",
+      "bytes": 4831
+    },
+    {
+      "path": "raw\\Meter.csv",
+      "sha256": "00489fb486b354666446e4309b0374866cc97eae79d5d2e58532d6c75c282d45",
+      "bytes": 1568
+    },
+    {
+      "path": "raw\\Meter.json",
+      "sha256": "fcf7101bb423197d0edea54d6f9f103e4364fac4cd980f29a11301f465011fd1",
+      "bytes": 6133
+    },
+    {
+      "path": "raw\\MeterDailyTotal.csv",
+      "sha256": "dcb26aed8696fe61935b8373bf507325b17edc2e6d1a519d423a181051917e27",
+      "bytes": 99916
+    },
+    {
+      "path": "raw\\MeterDailyTotal.json",
+      "sha256": "2549df8948e3ff10bbdd77fa32be1a2adf88363162aa6a947ead8f90ff95215d",
+      "bytes": 315858
+    },
+    {
+      "path": "raw\\Plant.csv",
+      "sha256": "689460a7a5a5cc77450180fed2ffbae839582de473facf667dacbc9ed304d767",
+      "bytes": 153
+    },
+    {
+      "path": "raw\\Plant.json",
+      "sha256": "817b93656960d57b97a7b1bfab79a893f9607e553a1e699121375fca6090f099",
+      "bytes": 230
+    },
+    {
+      "path": "raw\\ProductionBatch.csv",
+      "sha256": "d744180df508e231c74adbfe9cb041ae9b014bebb850a523e22ebb1e12ea0d81",
+      "bytes": 390539
+    },
+    {
+      "path": "raw\\ProductionBatch.json",
+      "sha256": "5ec5a103adb5710d3dbb7a1f0ebe32e28a3062a9e725df2ff56b738f731d710e",
+      "bytes": 944401
+    },
+    {
+      "path": "raw\\Recommendation.csv",
+      "sha256": "29eacf4b3be9905825365e97720c7fa25cc0465306fdb5b9df1ddfbae6769582",
+      "bytes": 4628
+    },
+    {
+      "path": "raw\\Recommendation.json",
+      "sha256": "ba4f5c2682ea1dca9eec79ee3cbcb091b9f3065163fe928c8c3deccddb6cdca6",
+      "bytes": 8492
+    },
+    {
+      "path": "raw\\seed.sqlite",
+      "sha256": "357caf52c48733d7877b44cd667c7b339e70a035075edde5be491bc631518089",
+      "bytes": 35450880
+    },
+    {
+      "path": "raw\\Shift.csv",
+      "sha256": "9c12d86d6fe5d682283898c48d9142f31314eae1b39efa7cd40ea7aaecc6205b",
+      "bytes": 234
+    },
+    {
+      "path": "raw\\Shift.json",
+      "sha256": "e03c512c8c4140141cfd1191d3524552cdd42c4bd3f8f98c00142ee33ddc5853",
+      "bytes": 609
+    },
+    {
+      "path": "raw\\Tariff.csv",
+      "sha256": "59c77e441c7d9c552a03cb5a6182e3f6f8d0b5280de3d5219236ba87cee86f3f",
+      "bytes": 522
+    },
+    {
+      "path": "raw\\Tariff.json",
+      "sha256": "87db340e8a0ce7a6de1446b1985db2bc9fc4b232da31f69364155a1b7cf16617",
+      "bytes": 1442
+    },
+    {
+      "path": "raw\\WeatherObservation.csv",
+      "sha256": "2324f80035606e8cfd8475f686ce1df54f10d355bc46912abb8109fa3058462b",
+      "bytes": 171788
+    },
+    {
+      "path": "raw\\WeatherObservation.json",
+      "sha256": "c4ce7d3d56632c773596d1222916b68b7f1eaa28ef9bc0af3c1db704d6e04cfa",
+      "bytes": 482757
+    }
+  ]
+}
