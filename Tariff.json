@@ -1,0 +1,54 @@
+[
+  {
+    "tariff_id": "TAR-2026-001",
+    "plant_id": "PLANT-001",
+    "name": "peak",
+    "rate_per_kwh": 0.22,
+    "demand_charge_per_kw": 12.0,
+    "day_type": "weekday",
+    "start_time_local": "14:00",
+    "end_time_local": "20:00",
+    "timezone": "UTC",
+    "effective_start": "2026-01-01",
+    "effective_end": "2026-03-31"
+  },
+  {
+    "tariff_id": "TAR-2026-002",
+    "plant_id": "PLANT-001",
+    "name": "shoulder",
+    "rate_per_kwh": 0.14,
+    "demand_charge_per_kw": 8.0,
+    "day_type": "weekday",
+    "start_time_local": "06:00",
+    "end_time_local": "14:00",
+    "timezone": "America/Chicago",
+    "effective_start": "2026-01-01",
+    "effective_end": "2026-03-31"
+  },
+  {
+    "tariff_id": "TAR-2026-003",
+    "plant_id": "PLANT-001",
+    "name": "offpeak",
+    "rate_per_kwh": 0.08,
+    "demand_charge_per_kw": 4.0,
+    "day_type": "weekday",
+    "start_time_local": "20:00",
+    "end_time_local": "06:00",
+    "timezone": "America/Chicago",
+    "effective_start": "2026-01-01",
+    "effective_end": "2026-03-31"
+  },
+  {
+    "tariff_id": "TAR-2026-004",
+    "plant_id": "PLANT-001",
+    "name": "offpeak",
+    "rate_per_kwh": 0.08,
+    "demand_charge_per_kw": 4.0,
+    "day_type": "weekend",
+    "start_time_local": "00:00",
+    "end_time_local": "23:59",
+    "timezone": "America/Chicago",
+    "effective_start": "2026-01-01",
+    "effective_end": "2026-03-31"
+  }
+]
