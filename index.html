@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnergyIQ – AI-Powered Industrial Energy Intelligence Platform</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Industrial Theme CSS -->
+  <link href="/static/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-lightning-charge-fill text-info fs-4"></i>
+        <span class="brand-badge fs-4">EnergyIQ</span>
+        <span class="brand-tag">Industrial AI</span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <div class="d-flex align-items-center gap-3 ms-auto flex-wrap">
+          <!-- Plant Selector -->
+          <div class="d-flex align-items-center gap-2">
+            <span class="text-muted small text-uppercase fw-semibold"><i class="bi bi-building"></i> Plant:</span>
+            <select class="form-select form-select-sm form-select-custom" id="plantSelect" style="width: 210px;">
+              <option value="PLANT-001" selected>Riverbend Mfg (PLANT-001)</option>
+            </select>
+          </div>
+
+          <!-- Role Switcher -->
+          <div class="d-flex align-items-center gap-2">
+            <span class="text-muted small text-uppercase fw-semibold"><i class="bi bi-person-badge"></i> Role:</span>
+            <select class="form-select form-select-sm form-select-custom" id="userRoleSelect" style="width: 210px;">
+              <option value="Plant Operator" selected>Plant Operator</option>
+              <option value="Maintenance/Quality Engineer">Maintenance Engineer</option>
+              <option value="Production Planner">Production Planner</option>
+              <option value="OT/IT Administrator">OT/IT Administrator</option>
+            </select>
+          </div>
+
+          <!-- Role Badge -->
+          <div class="role-badge">
+            <span class="role-dot"></span>
+            <span id="activeRoleBadge">Plant Operator</span>
+          </div>
+
+          <!-- SCADA Live Pulse Simulator -->
+          <button class="btn btn-sm btn-dark-outline d-flex align-items-center gap-2" id="btnSimulateScada" title="Simulate 15-Min Live SCADA Interval Ingestion">
+            <span class="scada-pulse" id="scadaPulseDot" style="display: none;"></span>
+            <span id="scadaSimLabel">Simulate SCADA Ticks</span>
+          </button>
+
+          <!-- Action Buttons -->
+          <button class="btn btn-sm btn-dark-outline" id="btnRefresh" title="Refresh Live Readings">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+          <button class="btn btn-sm btn-cyan" data-bs-toggle="modal" data-bs-target="#modalMaintenance">
+            <i class="bi bi-tools"></i> Log Maintenance
+          </button>
+          <button class="btn btn-sm btn-dark-outline" data-bs-toggle="modal" data-bs-target="#modalExport">
+            <i class="bi bi-download"></i> Exports
+          </button>
+          <div class="spinner-border spinner-border-sm text-cyan ms-2" id="globalSpinner" style="display: none;" role="status"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Role Perspective Notification Bar -->
+  <div class="py-2 px-4 border-bottom" style="background: rgba(17, 24, 39, 0.6); border-color: var(--border-color)!important;">
+    <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div class="small text-info fw-semibold" id="rolePerspectiveHint">
+        Mode: Plant Operator - Monitoring real-time telemetry, shift alert acknowledgements & energy waste.
+      </div>
+      <div class="d-flex align-items-center gap-3 small text-muted">
+        <span><i class="bi bi-clock-history"></i> Interval: 15-Min SCADA</span>
+        <span><i class="bi bi-calendar3"></i> Seed: 20261022 (90 Days)</span>
+        <span class="text-success"><i class="bi bi-shield-check"></i> Zero Fabrication Policy</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid px-4 py-4">
+
+    <!-- KPI Summary Row -->
+    <div class="row g-3 mb-4">
+      <div class="col-xl-2 col-md-4 col-sm-6">
+        <div class="kpi-card" style="--card-accent: #00f2fe;">
+          <div class="kpi-label">Total Energy (kWh)</div>
+          <div class="kpi-val" id="kpiTotalKwh">---</div>
+          <div class="kpi-sub">90-Day Plant Ingestion</div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4 col-sm-6">
+        <div class="kpi-card" style="--card-accent: #3b82f6;">
+          <div class="kpi-label">Electricity Cost ($)</div>
+          <div class="kpi-val" id="kpiTotalCost">---</div>
+          <div class="kpi-sub">Time-of-Use Tariff Calculated</div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4 col-sm-6">
+        <div class="kpi-card" style="--card-accent: #ef4444;">
+          <div class="kpi-label">Peak Demand (kW)</div>
+          <div class="kpi-val text-danger" id="kpiPeakDemand">---</div>
+          <div class="kpi-sub">Max Valid 15-Min Demand</div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4 col-sm-6">
+        <div class="kpi-card" style="--card-accent: #10b981;">
+          <div class="kpi-label">Energy Intensity</div>
+          <div class="kpi-val text-success" id="kpiIntensity">---</div>
+          <div class="kpi-sub">kWh / Finished Unit</div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4 col-sm-6">
+        <div class="kpi-card" style="--card-accent: #f59e0b;">
+          <div class="kpi-label">Idle Energy Waste</div>
+          <div class="kpi-val text-warning" id="kpiIdleWaste">---</div>
+          <div class="kpi-sub" id="kpiIdleWasteSub">---</div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-md-4 col-sm-6">
+        <div class="kpi-card" style="--card-accent: #8b5cf6;">
+          <div class="kpi-label">Identified Savings</div>
+          <div class="kpi-val" style="color: #a78bfa;" id="kpiSavings">---</div>
+          <div class="kpi-sub" id="kpiSavingsSub">---</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Tabs -->
+    <ul class="nav nav-tabs iq-tabs mb-4" id="mainDashboardTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" id="tab-overview" data-bs-toggle="tab" data-bs-target="#pane-overview" type="button">
+          <i class="bi bi-speedometer2 me-1"></i> Overview & Trends
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-anomalies" data-bs-toggle="tab" data-bs-target="#pane-anomalies" type="button">
+          <i class="bi bi-exclamation-triangle-fill text-warning me-1"></i> Anomaly Monitoring
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-production" data-bs-toggle="tab" data-bs-target="#pane-production" type="button">
+          <i class="bi bi-gear-wide-connected me-1"></i> Production & Intensity
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-recommendations" data-bs-toggle="tab" data-bs-target="#pane-recommendations" type="button">
+          <i class="bi bi-lightbulb-fill text-cyan me-1"></i> AI Recommendations
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-quality" data-bs-toggle="tab" data-bs-target="#pane-quality" type="button">
+          <i class="bi bi-shield-exclamation text-danger me-1"></i> Data Quality Hub
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-evaluation" data-bs-toggle="tab" data-bs-target="#pane-evaluation" type="button">
+          <i class="bi bi-award-fill text-success me-1"></i> Acceptance & Evaluation Suite
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab-audit" data-bs-toggle="tab" data-bs-target="#pane-audit" type="button">
+          <i class="bi bi-journal-text me-1"></i> Audit Trail & Traceability
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tab Content Panes -->
+    <div class="tab-content" id="mainDashboardContent">
+
+      <!-- PANE 1: Overview & Trends -->
+      <div class="tab-pane fade show active" id="pane-overview" role="tabpanel">
+
+        <!-- 24-Hour Predictive Demand Forecast Banner -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="iq-card border-info">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                <h5 class="iq-card-title text-info mb-0">
+                  <i class="bi bi-graph-up-arrow"></i> 24-Hour Predictive Peak Demand Forecast (kW)
+                </h5>
+                <span class="badge badge-high"><i class="bi bi-lightning"></i> Proactive Peak Shaving Model</span>
+              </div>
+              <div class="p-2 mb-3 rounded" style="background: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.2);">
+                <div class="small text-white" id="forecastAlertBanner">
+                  Calculating next 24-hour predictive power curve and high-tariff peak exposure...
+                </div>
+              </div>
+              <div style="height: 240px;">
+                <canvas id="chartForecast"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <!-- Daily Trend Chart -->
+          <div class="col-lg-8">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h5 class="iq-card-title"><i class="bi bi-graph-up text-cyan"></i> 90-Day Energy Consumption & Peak Demand (kWh / kW)</h5>
+                <span class="text-muted small">15-minute aggregated interval trend</span>
+              </div>
+              <div style="height: 320px;">
+                <canvas id="chartDailyTrend"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Hourly Diurnal Profile -->
+          <div class="col-lg-4">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h5 class="iq-card-title"><i class="bi bi-clock-history text-info"></i> 24-Hour Diurnal Power Demand</h5>
+                <span class="text-muted small">Peak tariff window overlay</span>
+              </div>
+              <div style="height: 320px;">
+                <canvas id="chartHourlyProfile"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Machine Breakdown -->
+          <div class="col-lg-5">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h5 class="iq-card-title"><i class="bi bi-hdd-stack text-primary"></i> Machine Energy & Idle Consumption</h5>
+                <span class="text-muted small">Click any machine for diagnostics</span>
+              </div>
+              <div style="height: 280px;">
+                <canvas id="chartMachineBreakdown"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Tariff Distribution -->
+          <div class="col-lg-3">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h5 class="iq-card-title"><i class="bi bi-pie-chart text-warning"></i> Cost by Tariff Window</h5>
+                <span class="text-muted small">TOU Rates</span>
+              </div>
+              <div style="height: 280px;">
+                <canvas id="chartTariffBreakdown"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Weather vs Energy -->
+          <div class="col-lg-4">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h5 class="iq-card-title"><i class="bi bi-cloud-sun text-success"></i> Temperature vs Energy Correlation</h5>
+                <span class="text-muted small">HVAC & process sensitivity</span>
+              </div>
+              <div style="height: 280px;">
+                <canvas id="chartWeatherCorr"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 2: Anomaly Monitoring -->
+      <div class="tab-pane fade" id="pane-anomalies" role="tabpanel">
+        <div class="iq-card">
+          <div class="iq-card-header flex-wrap gap-2">
+            <div>
+              <h5 class="iq-card-title"><i class="bi bi-shield-alert text-warning"></i> Industrial Anomaly & Exception Detection</h5>
+              <p class="text-muted small mb-0">Hybrid rule-based bounds + Isolation Forest multivariate telemetry outlier detection</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-sm btn-cyan" id="btnRunAnalytics">
+                <i class="bi bi-play-circle"></i> Run Live Detection Cycle
+              </button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom">
+              <thead>
+                <tr>
+                  <th>Anomaly ID</th>
+                  <th>Severity</th>
+                  <th>Category</th>
+                  <th>Entity ID (Click Machine)</th>
+                  <th>Timestamp</th>
+                  <th>Evidence & Measurement Rationale</th>
+                  <th>Operator Action</th>
+                </tr>
+              </thead>
+              <tbody id="anomaliesTableBody">
+                <tr><td colspan="7" class="text-center py-4 text-muted">Loading live anomalies...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 3: Production & Intensity -->
+      <div class="tab-pane fade" id="pane-production" role="tabpanel">
+        <div class="iq-card">
+          <div class="iq-card-header">
+            <div>
+              <h5 class="iq-card-title"><i class="bi bi-bar-chart-steps text-info"></i> Machine-Level Energy Intensity per Production Unit</h5>
+              <p class="text-muted small mb-0">Click any machine name for condition-based health diagnostics and mechanical load profile</p>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Machine Asset Name (Click for Diagnostics)</th>
+                  <th>Type</th>
+                  <th>Rated Power</th>
+                  <th>Batches</th>
+                  <th>Output Units</th>
+                  <th>Productive Energy</th>
+                  <th>Energy Intensity (kWh/Unit)</th>
+                  <th>Scrap %</th>
+                </tr>
+              </thead>
+              <tbody id="intensityTableBody">
+                <tr><td colspan="9" class="text-center py-4 text-muted">Loading production telemetry...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 4: AI Recommendations -->
+      <div class="tab-pane fade" id="pane-recommendations" role="tabpanel">
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="p-3 rounded border" style="background: rgba(0, 242, 254, 0.05); border-color: rgba(0, 242, 254, 0.2)!important;">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-info-circle-fill text-cyan fs-5"></i>
+                <div class="small">
+                  <strong>Engineering Transparency Rule:</strong> All recommendations are derived from deterministic machine baselines and verifiable tariff calculations. LLM generates natural language technical explanations without inventing energy readings or financial savings.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="recommendationsContainer">
+          <div class="text-center py-5 text-muted">Loading recommendations...</div>
+        </div>
+      </div>
+
+      <!-- PANE 5: Data Quality Hub -->
+      <div class="tab-pane fade" id="pane-quality" role="tabpanel">
+
+        <!-- Self-Healing Remediation Banner & Trigger -->
+        <div class="iq-card mb-4 border-cyan">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+              <h5 class="iq-card-title text-cyan mb-1"><i class="bi bi-magic"></i> Self-Healing SCADA Data Remediation</h5>
+              <p class="text-muted small mb-0">Automatically normalizes kW vs kWh unit errors, isolates duplicate records, and aligns machine hierarchy.</p>
+            </div>
+            <button class="btn btn-cyan" id="btnRemediate">
+              <i class="bi bi-shield-check"></i> Execute Automated Remediation
+            </button>
+          </div>
+
+          <!-- Remediation Result Card (hidden until run) -->
+          <div id="remediationResultCard" class="mt-3 p-3 rounded border border-success" style="display: none; background: rgba(16, 185, 129, 0.1);">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+              <div>
+                <strong class="text-success"><i class="bi bi-check-circle-fill"></i> Self-Healing Pipeline Executed Successfully:</strong>
+                <div class="small text-light mt-1">
+                  Corrected <span id="remUnitsCount" class="fw-bold">0</span> unit confusion records, quarantined <span id="remDupsCount" class="fw-bold">0</span> duplicates.
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="text-muted small">Billing Overstatement Prevented:</div>
+                <div class="fs-4 fw-bold text-success mono-cell" id="remSavedUsd">$0.00</div>
+                <div class="small text-info mono-cell" id="remSavedKwh">0 kWh corrected</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Cards for 5 Scenarios -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-2">
+            <div class="p-3 border rounded text-center" style="background: #111827; border-color: var(--border-color)!important;">
+              <div class="text-muted small">Total Exceptions</div>
+              <div class="fs-3 fw-bold text-white mono-cell" id="dqTotalCount">0</div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="p-3 border rounded text-center" style="background: #111827; border-color: var(--border-color)!important;">
+              <div class="text-muted small">A. Reconciliation</div>
+              <div class="fs-3 fw-bold text-danger mono-cell" id="dqRecCount">0</div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="p-3 border rounded text-center" style="background: #111827; border-color: var(--border-color)!important;">
+              <div class="text-muted small">B. kW/kWh Confusion</div>
+              <div class="fs-3 fw-bold text-danger mono-cell" id="dqUnitCount">0</div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="p-3 border rounded text-center" style="background: #111827; border-color: var(--border-color)!important;">
+              <div class="text-muted small">C. Timezone Mismatch</div>
+              <div class="fs-3 fw-bold text-warning mono-cell" id="dqTzCount">0</div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="p-3 border rounded text-center" style="background: #111827; border-color: var(--border-color)!important;">
+              <div class="text-muted small">D. Duplicates</div>
+              <div class="fs-3 fw-bold text-warning mono-cell" id="dqDupCount">0</div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="p-3 border rounded text-center" style="background: #111827; border-color: var(--border-color)!important;">
+              <div class="text-muted small">E. Hierarchy Misassign</div>
+              <div class="fs-3 fw-bold text-info mono-cell" id="dqHierCount">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep-dive Tables -->
+        <div class="iq-card mb-4">
+          <div class="iq-card-header">
+            <h6 class="iq-card-title text-danger"><i class="bi bi-calculator"></i> Scenario A: Meter Reconciliation Discrepancy (Daily Total vs Sum of Intervals)</h6>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom">
+              <thead>
+                <tr>
+                  <th>Meter</th>
+                  <th>Date</th>
+                  <th>Reported Total (kWh)</th>
+                  <th>Sum of Intervals (kWh)</th>
+                  <th>Discrepancy</th>
+                  <th>Engineered Corrective Decision</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyScenarioA"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="iq-card mb-4">
+          <div class="iq-card-header">
+            <h6 class="iq-card-title text-danger"><i class="bi bi-exclamation-octagon"></i> Scenario B: kW and kWh Physical Unit Confusion</h6>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom">
+              <thead>
+                <tr>
+                  <th>Reading ID</th>
+                  <th>Meter</th>
+                  <th>Timestamp</th>
+                  <th>Recorded kWh</th>
+                  <th>Expected kWh (kW * 0.25h)</th>
+                  <th>Error Magnitude</th>
+                  <th>Engineered Corrective Decision</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyScenarioB"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h6 class="iq-card-title text-warning"><i class="bi bi-clock"></i> Scenario C: Tariff Timezone Misalignment</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-custom">
+                  <thead>
+                    <tr>
+                      <th>Tariff ID</th>
+                      <th>Tariff Name</th>
+                      <th>Configured TZ</th>
+                      <th>Plant TZ</th>
+                      <th>Offset</th>
+                      <th>Decision</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodyScenarioC"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="iq-card">
+              <div class="iq-card-header">
+                <h6 class="iq-card-title text-warning"><i class="bi bi-files"></i> Scenario D: Duplicate Reading Ingestion</h6>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-custom">
+                  <thead>
+                    <tr>
+                      <th>Reading ID</th>
+                      <th>Meter</th>
+                      <th>Timestamp</th>
+                      <th>Duplicate Energy</th>
+                      <th>Decision</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodyScenarioD"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="iq-card mt-4">
+          <div class="iq-card-header">
+            <h6 class="iq-card-title text-info"><i class="bi bi-diagram-3"></i> Scenario E: Machine-Meter Hierarchy Mismatch</h6>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom">
+              <thead>
+                <tr>
+                  <th>Reading ID</th>
+                  <th>Machine ID</th>
+                  <th>Attributed Reading Meter</th>
+                  <th>Registered Master Meter</th>
+                  <th>Timestamp</th>
+                  <th>Decision</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyScenarioE"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 6: Acceptance & Evaluation Suite -->
+      <div class="tab-pane fade" id="pane-evaluation" role="tabpanel">
+        <div class="iq-card mb-4">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+              <h5 class="iq-card-title text-success"><i class="bi bi-patch-check"></i> Automated Acceptance & Ground-Truth Benchmark Suite</h5>
+              <p class="text-muted small mb-0">Computes Precision, Recall, F1-Scores against the isolated evaluation dataset, validates schema and calculations.</p>
+            </div>
+            <button class="btn btn-cyan" id="btnRunEval">
+              <i class="bi bi-play-circle-fill"></i> Execute Acceptance Benchmark Suite
+            </button>
+          </div>
+        </div>
+        <div id="evaluationReportContainer">
+          <div class="text-center py-5 text-muted">Click "Execute Acceptance Benchmark Suite" above to run the full automated verification.</div>
+        </div>
+      </div>
+
+      <!-- PANE 7: Audit Trail & Traceability -->
+      <div class="tab-pane fade" id="pane-audit" role="tabpanel">
+        <div class="iq-card">
+          <div class="iq-card-header">
+            <h5 class="iq-card-title"><i class="bi bi-journal-bookmark text-primary"></i> Historical Audit Trail & Operational Traceability</h5>
+            <span class="text-muted small">Immutable event ledger of decisions, maintenance, and analytics runs</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Event Type</th>
+                  <th>User Role</th>
+                  <th>Target Entity</th>
+                  <th>Details & State Transition</th>
+                </tr>
+              </thead>
+              <tbody id="auditTableBody">
+                <tr><td colspan="5" class="text-center py-4 text-muted">Loading audit history...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal: Machine Diagnostic Deep-Dive -->
+  <div class="modal fade" id="modalMachineDiag" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom">
+          <div>
+            <h5 class="modal-title fw-bold text-white mb-0" id="diagMachineName">Machine Asset Diagnostics</h5>
+            <span class="badge bg-secondary" id="diagMachineType">TYPE</span>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <!-- Machine Health Score & Specs -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-4">
+              <div class="p-3 border rounded text-center" style="background: rgba(255,255,255,0.02); border-color: var(--border-color)!important;">
+                <div class="text-muted small">Asset Health Score</div>
+                <div class="fs-2 fw-bold text-cyan mono-cell" id="diagHealthScore">--%</div>
+                <span class="badge badge-low" id="diagHealthStatus">EXCELLENT</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 border rounded" style="background: rgba(255,255,255,0.02); border-color: var(--border-color)!important;">
+                <div class="small text-muted mb-1">Rated Nameplate: <strong class="text-white" id="diagRatedKw">-- kW</strong></div>
+                <div class="small text-muted mb-1">Idle Baseline: <strong class="text-white" id="diagIdleBase">-- kW</strong></div>
+                <div class="small text-muted">Standby Drift: <strong class="text-warning" id="diagWearDrift">+--%</strong></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 border rounded" style="background: rgba(255,255,255,0.02); border-color: var(--border-color)!important;">
+                <div class="small text-muted mb-1">90-Day Energy: <strong class="text-white" id="diagTotKwh">-- kWh</strong></div>
+                <div class="small text-muted mb-1">Idle Portion: <strong class="text-warning" id="diagIdleKwh">-- kWh</strong></div>
+                <div class="small text-muted">Peak Power: <strong class="text-danger" id="diagPeakKw">-- kW</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Machine Diurnal Curve -->
+          <h6 class="fw-bold text-white mb-2"><i class="bi bi-clock-history text-primary"></i> 24-Hour Diurnal Power Profile (kW)</h6>
+          <div style="height: 180px;" class="mb-4">
+            <canvas id="chartMachineDiagnostics"></canvas>
+          </div>
+
+          <!-- Recent Batches -->
+          <h6 class="fw-bold text-white mb-2"><i class="bi bi-boxes text-info"></i> Recent Production Batches on this Asset</h6>
+          <ul class="list-group list-group-flush bg-transparent" id="diagBatchList">
+            <li class="list-group-item bg-transparent text-muted small">Loading batches...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Log Maintenance Event -->
+  <div class="modal fade" id="modalMaintenance" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title fw-bold text-white"><i class="bi bi-tools text-cyan"></i> Log Machine Maintenance Event</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="maintForm">
+          <div class="modal-body p-4">
+            <div class="mb-3">
+              <label class="form-label text-muted small">Target Machine</label>
+              <select class="form-select form-select-custom" id="maintMachineSelect" required>
+                <option value="MCH-PLANT-001-001">Press 001 (MCH-PLANT-001-001)</option>
+                <option value="MCH-PLANT-001-002">CNC 002 (MCH-PLANT-001-002)</option>
+                <option value="MCH-PLANT-001-003">Oven 003 (MCH-PLANT-001-003)</option>
+                <option value="MCH-PLANT-001-004">Compressor 004 (MCH-PLANT-001-004)</option>
+                <option value="MCH-PLANT-001-005">Mixer 005 (MCH-PLANT-001-005)</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-muted small">Maintenance Type</label>
+              <select class="form-select form-select-custom" id="maintTypeSelect" required>
+                <option value="preventive" selected>Preventive Servicing & Lubrication</option>
+                <option value="corrective">Corrective Standby Repair</option>
+                <option value="inspection">Thermal Imaging / Submeter Inspection</option>
+              </select>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label text-muted small">Start Time</label>
+                <input type="datetime-local" class="form-control form-control-custom" id="maintStartTs" required value="2026-03-31T08:00">
+              </div>
+              <div class="col-6">
+                <label class="form-label text-muted small">End Time</label>
+                <input type="datetime-local" class="form-control form-control-custom" id="maintEndTs" required value="2026-03-31T12:00">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-muted small">Operational Impact</label>
+              <select class="form-select form-select-custom" id="maintImpact">
+                <option value="downtime" selected>Machine Downtime (Unproductive)</option>
+                <option value="reduced_output">Reduced Output Speed</option>
+                <option value="none">No Production Impact</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-muted small">Work Order Description</label>
+              <textarea class="form-control form-control-custom" id="maintDesc" rows="3" required placeholder="Inspected standby valve seal, adjusted PLC timeout to eliminate idle parasitic consumption."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer modal-footer-custom">
+            <button type="button" class="btn btn-dark-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-cyan">Save Work Order</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Data Exports -->
+  <div class="modal fade" id="modalExport" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title fw-bold text-white"><i class="bi bi-download text-cyan"></i> Data Exports (CSV / JSON)</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small">Download relational database tables directly for audit and reporting:</p>
+          <div class="list-group list-group-flush bg-transparent">
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-cpu me-2"></i> Machine Master Data</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('Machine','csv')">CSV</button>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2" onclick="exportData('Machine','json')">JSON</button>
+              </div>
+            </div>
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-speedometer me-2"></i> Meter Master Data</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('Meter','csv')">CSV</button>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2" onclick="exportData('Meter','json')">JSON</button>
+              </div>
+            </div>
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-lightning-charge me-2"></i> Energy Readings (Interval SCADA)</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('EnergyReading','csv')">CSV</button>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2" onclick="exportData('EnergyReading','json')">JSON</button>
+              </div>
+            </div>
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-boxes me-2"></i> Production Batches</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('ProductionBatch','csv')">CSV</button>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2" onclick="exportData('ProductionBatch','json')">JSON</button>
+              </div>
+            </div>
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-lightbulb me-2"></i> Energy Recommendations</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('Recommendation','csv')">CSV</button>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2" onclick="exportData('Recommendation','json')">JSON</button>
+              </div>
+            </div>
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-calculator me-2"></i> Meter Reconciliation Totals</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('MeterDailyTotal','csv')">CSV</button>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2" onclick="exportData('MeterDailyTotal','json')">JSON</button>
+              </div>
+            </div>
+            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center border-secondary py-2">
+              <span class="text-white"><i class="bi bi-journal-text me-2"></i> System Traceability Audit Log</span>
+              <div>
+                <button class="btn btn-sm btn-dark-outline py-1 px-2 me-1" onclick="exportData('AuditLog','csv')">CSV</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Industrial AI Copilot Button -->
+  <button class="copilot-float-btn" id="btnCopilotToggle" title="Open Industrial AI Copilot">
+    <i class="bi bi-chat-dots-fill"></i>
+  </button>
+
+  <!-- Industrial AI Copilot Drawer -->
+  <div class="copilot-drawer hidden" id="copilotDrawer">
+    <div class="copilot-header">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-cpu-fill text-cyan"></i>
+        <strong class="text-white small">Plant Energy AI Copilot</strong>
+      </div>
+      <button class="btn-close btn-close-white btn-sm" onclick="toggleCopilot()"></button>
+    </div>
+
+    <div class="copilot-messages" id="copilotMessages">
+      <div class="copilot-bubble bot">
+        Hello! I am your <strong>EnergyIQ Industrial Copilot</strong>. I query real plant telemetry to answer questions on idle load, peak demand, tariffs, and machine health.
+        <div class="copilot-suggestions">
+          <span class="copilot-chip" onclick="sendPresetQuery('Which machine wastes the most idle energy?')">Top Idle Machine?</span>
+          <span class="copilot-chip" onclick="sendPresetQuery('What was our peak demand?')">Peak Demand?</span>
+          <span class="copilot-chip" onclick="sendPresetQuery('How much money can we save?')">Identified Savings?</span>
+          <span class="copilot-chip" onclick="sendPresetQuery('Are there any critical anomalies?')">Active Anomalies?</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="copilot-input-area" id="copilotForm">
+      <input type="text" class="form-control form-control-sm form-control-custom" id="copilotInput" placeholder="Ask about plant energy, machines, tariffs..." required>
+      <button type="submit" class="btn btn-sm btn-cyan"><i class="bi bi-send-fill"></i></button>
+    </form>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <!-- Custom Charts & App Scripts -->
+  <script src="/static/js/charts.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
