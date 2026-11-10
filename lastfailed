@@ -1,6 +1,0 @@
-{
-  "energy_analytics/tests/test_api.py": true,
-  "energy_analytics/tests/test_data_quality.py": true,
-  "energy_analytics/tests/test_energy_engine.py": true,
-  "energy_analytics/tests/test_evaluation_benchmark.py": true
-}
