@@ -2,7 +2,7 @@
   {
     "case_id": "GT-UNIT-0001",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-018-20260301T1215",
+    "record_id": "ENG-MTR-PLANT-001-013-20260216T0645",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -11,7 +11,7 @@
   {
     "case_id": "GT-UNIT-0002",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-014-20260215T1645",
+    "record_id": "ENG-MTR-PLANT-001-010-20260201T2115",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -20,7 +20,7 @@
   {
     "case_id": "GT-UNIT-0003",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-019-20260213T2300",
+    "record_id": "ENG-MTR-PLANT-001-007-20260207T2245",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -29,7 +29,7 @@
   {
     "case_id": "GT-UNIT-0004",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260216T0645",
+    "record_id": "ENG-MTR-PLANT-001-011-20260310T0045",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -38,7 +38,7 @@
   {
     "case_id": "GT-UNIT-0005",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-010-20260201T2115",
+    "record_id": "ENG-MTR-PLANT-001-002-20260323T1415",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -47,7 +47,7 @@
   {
     "case_id": "GT-UNIT-0006",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-007-20260207T2245",
+    "record_id": "ENG-MTR-PLANT-001-008-20260227T0845",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -56,7 +56,7 @@
   {
     "case_id": "GT-UNIT-0007",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-011-20260310T0045",
+    "record_id": "ENG-MTR-PLANT-001-010-20260101T1215",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -65,7 +65,7 @@
   {
     "case_id": "GT-UNIT-0008",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260323T1415",
+    "record_id": "ENG-MTR-PLANT-001-008-20260214T1030",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -74,7 +74,7 @@
   {
     "case_id": "GT-UNIT-0009",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260227T0845",
+    "record_id": "ENG-MTR-PLANT-001-012-20260203T2230",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -83,7 +83,7 @@
   {
     "case_id": "GT-UNIT-0010",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-010-20260101T1215",
+    "record_id": "ENG-MTR-PLANT-001-006-20260115T0630",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -92,7 +92,7 @@
   {
     "case_id": "GT-UNIT-0011",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260214T1030",
+    "record_id": "ENG-MTR-PLANT-001-015-20260117T0100",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -101,7 +101,7 @@
   {
     "case_id": "GT-UNIT-0012",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-012-20260203T2230",
+    "record_id": "ENG-MTR-PLANT-001-016-20260227T0745",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -110,7 +110,7 @@
   {
     "case_id": "GT-UNIT-0013",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-006-20260115T0630",
+    "record_id": "ENG-MTR-PLANT-001-002-20260228T0000",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -119,7 +119,7 @@
   {
     "case_id": "GT-UNIT-0014",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-015-20260117T0100",
+    "record_id": "ENG-MTR-PLANT-001-017-20260103T0045",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -128,7 +128,7 @@
   {
     "case_id": "GT-UNIT-0015",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-016-20260227T0745",
+    "record_id": "ENG-MTR-PLANT-001-015-20260210T2130",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -137,7 +137,7 @@
   {
     "case_id": "GT-UNIT-0016",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260228T0000",
+    "record_id": "ENG-MTR-PLANT-001-009-20260317T0800",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -146,7 +146,7 @@
   {
     "case_id": "GT-UNIT-0017",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-017-20260103T0045",
+    "record_id": "ENG-MTR-PLANT-001-014-20260222T0830",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -155,7 +155,7 @@
   {
     "case_id": "GT-UNIT-0018",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-015-20260210T2130",
+    "record_id": "ENG-MTR-PLANT-001-010-20260117T2215",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -164,7 +164,7 @@
   {
     "case_id": "GT-UNIT-0019",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-009-20260317T0800",
+    "record_id": "ENG-MTR-PLANT-001-010-20260216T1300",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -173,7 +173,7 @@
   {
     "case_id": "GT-UNIT-0020",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-014-20260222T0830",
+    "record_id": "ENG-MTR-PLANT-001-001-20260223T2230",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -182,7 +182,7 @@
   {
     "case_id": "GT-UNIT-0021",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-010-20260117T2215",
+    "record_id": "ENG-MTR-PLANT-001-005-20260103T1215",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -191,7 +191,7 @@
   {
     "case_id": "GT-UNIT-0022",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-010-20260216T1300",
+    "record_id": "ENG-MTR-PLANT-001-002-20260303T0145",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -200,7 +200,7 @@
   {
     "case_id": "GT-UNIT-0023",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-001-20260223T2230",
+    "record_id": "ENG-MTR-PLANT-001-008-20260325T2100",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -209,7 +209,7 @@
   {
     "case_id": "GT-UNIT-0024",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-005-20260103T1215",
+    "record_id": "ENG-MTR-PLANT-001-012-20260122T1630",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -218,7 +218,7 @@
   {
     "case_id": "GT-UNIT-0025",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260303T0145",
+    "record_id": "ENG-MTR-PLANT-001-005-20260330T0200",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -227,7 +227,7 @@
   {
     "case_id": "GT-UNIT-0026",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260325T2100",
+    "record_id": "ENG-MTR-PLANT-001-018-20260105T1730",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -236,7 +236,7 @@
   {
     "case_id": "GT-UNIT-0027",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-012-20260122T1630",
+    "record_id": "ENG-MTR-PLANT-001-011-20260108T1730",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -245,7 +245,7 @@
   {
     "case_id": "GT-UNIT-0028",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-005-20260330T0200",
+    "record_id": "ENG-MTR-PLANT-001-002-20260315T1930",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -254,7 +254,7 @@
   {
     "case_id": "GT-UNIT-0029",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-018-20260105T1730",
+    "record_id": "ENG-MTR-PLANT-001-008-20260116T0030",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -263,7 +263,7 @@
   {
     "case_id": "GT-UNIT-0030",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-011-20260108T1730",
+    "record_id": "ENG-MTR-PLANT-001-008-20260323T0300",
     "issue_type": "kw_confused_with_kwh",
     "expected_detection": "kwh inconsistent with kw_avg*interval_hours",
     "expected_action": "recompute kwh or flag/exclude",
@@ -272,7 +272,7 @@
   {
     "case_id": "GT-DUP-0031",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260315T1930-DUP",
+    "record_id": "ENG-MTR-PLANT-001-019-20260204T2315-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -281,7 +281,7 @@
   {
     "case_id": "GT-DUP-0032",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260116T0030-DUP",
+    "record_id": "ENG-MTR-PLANT-001-019-20260105T1430-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -290,7 +290,7 @@
   {
     "case_id": "GT-DUP-0033",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260323T0300-DUP",
+    "record_id": "ENG-MTR-PLANT-001-016-20260224T1015-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -299,7 +299,7 @@
   {
     "case_id": "GT-DUP-0034",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-019-20260204T2315-DUP",
+    "record_id": "ENG-MTR-PLANT-001-020-20260320T0215-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -308,7 +308,7 @@
   {
     "case_id": "GT-DUP-0035",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-019-20260105T1430-DUP",
+    "record_id": "ENG-MTR-PLANT-001-009-20260220T0930-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -317,7 +317,7 @@
   {
     "case_id": "GT-DUP-0036",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-016-20260224T1015-DUP",
+    "record_id": "ENG-MTR-PLANT-001-012-20260122T0715-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -326,7 +326,7 @@
   {
     "case_id": "GT-DUP-0037",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-020-20260320T0215-DUP",
+    "record_id": "ENG-MTR-PLANT-001-018-20260319T2300-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -335,7 +335,7 @@
   {
     "case_id": "GT-DUP-0038",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-009-20260220T0930-DUP",
+    "record_id": "ENG-MTR-PLANT-001-011-20260320T0045-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -344,7 +344,7 @@
   {
     "case_id": "GT-DUP-0039",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-012-20260122T0715-DUP",
+    "record_id": "ENG-MTR-PLANT-001-007-20260313T1800-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -353,7 +353,7 @@
   {
     "case_id": "GT-DUP-0040",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-018-20260319T2300-DUP",
+    "record_id": "ENG-MTR-PLANT-001-005-20260309T1245-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -362,7 +362,7 @@
   {
     "case_id": "GT-DUP-0041",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-011-20260320T0045-DUP",
+    "record_id": "ENG-MTR-PLANT-001-016-20260111T2330-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -371,7 +371,7 @@
   {
     "case_id": "GT-DUP-0042",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-007-20260313T1800-DUP",
+    "record_id": "ENG-MTR-PLANT-001-019-20260317T2200-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -380,7 +380,7 @@
   {
     "case_id": "GT-DUP-0043",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-005-20260309T1245-DUP",
+    "record_id": "ENG-MTR-PLANT-001-019-20260122T0100-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -389,7 +389,7 @@
   {
     "case_id": "GT-DUP-0044",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-016-20260111T2330-DUP",
+    "record_id": "ENG-MTR-PLANT-001-002-20260114T0145-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -398,7 +398,7 @@
   {
     "case_id": "GT-DUP-0045",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-019-20260317T2200-DUP",
+    "record_id": "ENG-MTR-PLANT-001-008-20260107T0100-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -407,7 +407,7 @@
   {
     "case_id": "GT-DUP-0046",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-019-20260122T0100-DUP",
+    "record_id": "ENG-MTR-PLANT-001-017-20260302T0930-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -416,7 +416,7 @@
   {
     "case_id": "GT-DUP-0047",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260114T0145-DUP",
+    "record_id": "ENG-MTR-PLANT-001-018-20260208T2345-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -425,7 +425,7 @@
   {
     "case_id": "GT-DUP-0048",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260107T0100-DUP",
+    "record_id": "ENG-MTR-PLANT-001-001-20260202T1800-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -434,7 +434,7 @@
   {
     "case_id": "GT-DUP-0049",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-017-20260302T0930-DUP",
+    "record_id": "ENG-MTR-PLANT-001-004-20260322T2000-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -443,7 +443,7 @@
   {
     "case_id": "GT-DUP-0050",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-018-20260208T2345-DUP",
+    "record_id": "ENG-MTR-PLANT-001-005-20260312T0130-DUP",
     "issue_type": "reading_duplicate",
     "expected_detection": "duplicate interval/meter key",
     "expected_action": "deduplicate keeping canonical record",
@@ -452,7 +452,7 @@
   {
     "case_id": "GT-HIER-0051",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260202T1800",
+    "record_id": "ENG-MTR-PLANT-001-012-20260215T0345",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -461,7 +461,7 @@
   {
     "case_id": "GT-HIER-0052",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-005-20260322T2000",
+    "record_id": "ENG-MTR-PLANT-001-008-20260314T0100",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -470,7 +470,7 @@
   {
     "case_id": "GT-HIER-0053",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-006-20260312T0130",
+    "record_id": "ENG-MTR-PLANT-001-009-20260305T1900",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -479,7 +479,7 @@
   {
     "case_id": "GT-HIER-0054",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-012-20260215T0345",
+    "record_id": "ENG-MTR-PLANT-001-016-20260327T0015",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -488,7 +488,7 @@
   {
     "case_id": "GT-HIER-0055",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260314T0100",
+    "record_id": "ENG-MTR-PLANT-001-015-20260120T0100",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -497,7 +497,7 @@
   {
     "case_id": "GT-HIER-0056",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-009-20260305T1900",
+    "record_id": "ENG-MTR-PLANT-001-019-20260217T2115",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -506,7 +506,7 @@
   {
     "case_id": "GT-HIER-0057",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-016-20260327T0015",
+    "record_id": "ENG-MTR-PLANT-001-020-20260119T1815",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -515,7 +515,7 @@
   {
     "case_id": "GT-HIER-0058",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-015-20260120T0100",
+    "record_id": "ENG-MTR-PLANT-001-018-20260121T0045",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -524,7 +524,7 @@
   {
     "case_id": "GT-HIER-0059",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-019-20260217T2115",
+    "record_id": "ENG-MTR-PLANT-001-020-20260127T0600",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -533,7 +533,7 @@
   {
     "case_id": "GT-HIER-0060",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-020-20260119T1815",
+    "record_id": "ENG-MTR-PLANT-001-016-20260322T0815",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -542,7 +542,7 @@
   {
     "case_id": "GT-HIER-0061",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-018-20260121T0045",
+    "record_id": "ENG-MTR-PLANT-001-010-20260216T0400",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -551,7 +551,7 @@
   {
     "case_id": "GT-HIER-0062",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-020-20260127T0600",
+    "record_id": "ENG-MTR-PLANT-001-003-20260118T0130",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -560,7 +560,7 @@
   {
     "case_id": "GT-HIER-0063",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-016-20260322T0815",
+    "record_id": "ENG-MTR-PLANT-001-012-20260307T0745",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -569,7 +569,7 @@
   {
     "case_id": "GT-HIER-0064",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-010-20260216T0400",
+    "record_id": "ENG-MTR-PLANT-001-009-20260328T2045",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -578,7 +578,7 @@
   {
     "case_id": "GT-HIER-0065",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-003-20260118T0130",
+    "record_id": "ENG-MTR-PLANT-001-013-20260314T0600",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -587,7 +587,7 @@
   {
     "case_id": "GT-HIER-0066",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-012-20260307T0745",
+    "record_id": "ENG-MTR-PLANT-001-007-20260123T1030",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -596,7 +596,7 @@
   {
     "case_id": "GT-HIER-0067",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-009-20260328T2045",
+    "record_id": "ENG-MTR-PLANT-001-009-20260307T1000",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -605,7 +605,7 @@
   {
     "case_id": "GT-HIER-0068",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260314T0600",
+    "record_id": "ENG-MTR-PLANT-001-018-20260118T0745",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -614,7 +614,7 @@
   {
     "case_id": "GT-HIER-0069",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-007-20260123T1030",
+    "record_id": "ENG-MTR-PLANT-001-020-20260113T1415",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -623,7 +623,7 @@
   {
     "case_id": "GT-HIER-0070",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-009-20260307T1000",
+    "record_id": "ENG-MTR-PLANT-001-009-20260306T1800",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -632,7 +632,7 @@
   {
     "case_id": "GT-HIER-0071",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-018-20260118T0745",
+    "record_id": "ENG-MTR-PLANT-001-007-20260302T1500",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -641,7 +641,7 @@
   {
     "case_id": "GT-HIER-0072",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-020-20260113T1415",
+    "record_id": "ENG-MTR-PLANT-001-016-20260308T0400",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -650,7 +650,7 @@
   {
     "case_id": "GT-HIER-0073",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-009-20260306T1800",
+    "record_id": "ENG-MTR-PLANT-001-012-20260302T1930",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -659,7 +659,7 @@
   {
     "case_id": "GT-HIER-0074",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-007-20260302T1500",
+    "record_id": "ENG-MTR-PLANT-001-019-20260123T0500",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -668,7 +668,7 @@
   {
     "case_id": "GT-HIER-0075",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-016-20260308T0400",
+    "record_id": "ENG-MTR-PLANT-001-005-20260125T1400",
     "issue_type": "machine_outside_meter_hierarchy",
     "expected_detection": "machine.meter_id != reading.meter_id",
     "expected_action": "reattribute or quarantine record",
@@ -686,7 +686,7 @@
   {
     "case_id": "GT-REC-0077",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-018|2026-03-27",
+    "record_id": "MTR-PLANT-001-002|2026-03-23",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -695,7 +695,7 @@
   {
     "case_id": "GT-REC-0078",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-008|2026-03-04",
+    "record_id": "MTR-PLANT-001-020|2026-03-02",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -704,7 +704,7 @@
   {
     "case_id": "GT-REC-0079",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-013|2026-01-21",
+    "record_id": "MTR-PLANT-001-017|2026-03-15",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -713,7 +713,7 @@
   {
     "case_id": "GT-REC-0080",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-002|2026-03-23",
+    "record_id": "MTR-PLANT-001-017|2026-02-06",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -722,7 +722,7 @@
   {
     "case_id": "GT-REC-0081",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-020|2026-03-02",
+    "record_id": "MTR-PLANT-001-006|2026-01-08",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -731,7 +731,7 @@
   {
     "case_id": "GT-REC-0082",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-017|2026-03-15",
+    "record_id": "MTR-PLANT-001-016|2026-01-12",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -740,7 +740,7 @@
   {
     "case_id": "GT-REC-0083",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-017|2026-02-06",
+    "record_id": "MTR-PLANT-001-018|2026-03-29",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -749,7 +749,7 @@
   {
     "case_id": "GT-REC-0084",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-006|2026-01-08",
+    "record_id": "MTR-PLANT-001-011|2026-03-30",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -758,7 +758,7 @@
   {
     "case_id": "GT-REC-0085",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-016|2026-01-12",
+    "record_id": "MTR-PLANT-001-013|2026-03-23",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -767,7 +767,7 @@
   {
     "case_id": "GT-REC-0086",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-018|2026-03-29",
+    "record_id": "MTR-PLANT-001-005|2026-03-08",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -776,7 +776,7 @@
   {
     "case_id": "GT-REC-0087",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-011|2026-03-30",
+    "record_id": "MTR-PLANT-001-006|2026-03-20",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -785,7 +785,7 @@
   {
     "case_id": "GT-REC-0088",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-013|2026-03-23",
+    "record_id": "MTR-PLANT-001-005|2026-01-14",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -794,7 +794,7 @@
   {
     "case_id": "GT-REC-0089",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-005|2026-03-08",
+    "record_id": "MTR-PLANT-001-005|2026-02-15",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -803,7 +803,7 @@
   {
     "case_id": "GT-REC-0090",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-006|2026-03-20",
+    "record_id": "MTR-PLANT-001-003|2026-02-03",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -812,7 +812,7 @@
   {
     "case_id": "GT-REC-0091",
     "entity": "MeterDailyTotal",
-    "record_id": "MTR-PLANT-001-005|2026-01-14",
+    "record_id": "MTR-PLANT-001-007|2026-01-29",
     "issue_type": "meter_total_disagrees_with_interval_sums",
     "expected_detection": "reported_total_kwh != sum(interval kWh)",
     "expected_action": "investigate meter/aggregation, use interval sum with caveats",
@@ -821,7 +821,7 @@
   {
     "case_id": "GT-GAP-0092",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1630",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2015",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -830,7 +830,7 @@
   {
     "case_id": "GT-GAP-0093",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1715",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1745",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -839,7 +839,7 @@
   {
     "case_id": "GT-GAP-0094",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1730",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2100",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -848,7 +848,7 @@
   {
     "case_id": "GT-GAP-0095",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1900",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1700",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -857,7 +857,7 @@
   {
     "case_id": "GT-GAP-0096",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1800",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1830",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -866,7 +866,7 @@
   {
     "case_id": "GT-GAP-0097",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1815",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2145",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -875,7 +875,7 @@
   {
     "case_id": "GT-GAP-0098",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1945",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1915",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -884,7 +884,7 @@
   {
     "case_id": "GT-GAP-0099",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2045",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1715",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -893,7 +893,7 @@
   {
     "case_id": "GT-GAP-0100",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2130",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1630",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -902,7 +902,7 @@
   {
     "case_id": "GT-GAP-0101",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1700",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1800",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -911,7 +911,7 @@
   {
     "case_id": "GT-GAP-0102",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1715",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1815",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -920,7 +920,7 @@
   {
     "case_id": "GT-GAP-0103",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1615",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2130",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -929,7 +929,7 @@
   {
     "case_id": "GT-GAP-0104",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1745",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1730",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -938,7 +938,7 @@
   {
     "case_id": "GT-GAP-0105",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1800",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1900",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -947,7 +947,7 @@
   {
     "case_id": "GT-GAP-0106",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1830",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2045",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -956,7 +956,7 @@
   {
     "case_id": "GT-GAP-0107",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1845",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1945",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -965,7 +965,7 @@
   {
     "case_id": "GT-GAP-0108",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1930",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1615",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -974,7 +974,7 @@
   {
     "case_id": "GT-GAP-0109",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2030",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1700",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -983,7 +983,7 @@
   {
     "case_id": "GT-GAP-0110",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2200",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1830",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -992,7 +992,7 @@
   {
     "case_id": "GT-GAP-0111",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2115",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1745",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1001,7 +1001,7 @@
   {
     "case_id": "GT-GAP-0112",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1600",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1715",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1010,7 +1010,7 @@
   {
     "case_id": "GT-GAP-0113",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1645",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2030",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1019,7 +1019,7 @@
   {
     "case_id": "GT-GAP-0114",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1815",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1800",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1028,7 +1028,7 @@
   {
     "case_id": "GT-GAP-0115",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1700",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1930",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1037,7 +1037,7 @@
   {
     "case_id": "GT-GAP-0116",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1830",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2115",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1046,7 +1046,7 @@
   {
     "case_id": "GT-GAP-0117",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-002-20260301T1730",
+    "record_id": "ENG-MTR-PLANT-001-013-20260309T1845",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1055,7 +1055,7 @@
   {
     "case_id": "GT-GAP-0118",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1745",
+    "record_id": "ENG-MTR-PLANT-001-008-20260312T2200",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1064,7 +1064,7 @@
   {
     "case_id": "GT-GAP-0119",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-013-20260309T1915",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1645",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1073,7 +1073,7 @@
   {
     "case_id": "GT-GAP-0120",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2015",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1600",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1082,7 +1082,7 @@
   {
     "case_id": "GT-GAP-0121",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2100",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1730",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
@@ -1091,7 +1091,7 @@
   {
     "case_id": "GT-GAP-0122",
     "entity": "EnergyReading",
-    "record_id": "ENG-MTR-PLANT-001-008-20260312T2145",
+    "record_id": "ENG-MTR-PLANT-001-002-20260301T1815",
     "issue_type": "meter_gap_missing_interval",
     "expected_detection": "missing timestamp in 15-min sequence",
     "expected_action": "estimate or flag coverage gap",
