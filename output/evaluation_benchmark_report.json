@@ -1,0 +1,133 @@
+{
+  "overall_status": "FAIL",
+  "benchmark_summary": {
+    "overall_precision": 1.0,
+    "overall_recall": 0.2308,
+    "overall_f1_score": 0.375,
+    "total_ground_truth_cases": 124,
+    "true_positives": 21,
+    "false_positives": 0,
+    "false_negatives": 70
+  },
+  "scenario_evaluations": {
+    "Meter Reconciliation Discrepancy": {
+      "ground_truth_count": 15,
+      "detected_count": 0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 15,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "passed": false
+    },
+    "kW vs kWh Unit Inconsistency": {
+      "ground_truth_count": 30,
+      "detected_count": 0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 30,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "passed": false
+    },
+    "Tariff Timezone Misalignment": {
+      "ground_truth_count": 1,
+      "detected_count": 1,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "passed": true
+    },
+    "Duplicate Reading Ingestion": {
+      "ground_truth_count": 20,
+      "detected_count": 20,
+      "true_positives": 20,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "passed": true
+    },
+    "Invalid Machine-Meter Hierarchy": {
+      "ground_truth_count": 25,
+      "detected_count": 0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 25,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "passed": false
+    }
+  },
+  "structural_integrity_checks": {
+    "Plant_pk_uniqueness": {
+      "passed": true,
+      "total_records": 1,
+      "distinct_keys": 1
+    },
+    "Meter_pk_uniqueness": {
+      "passed": true,
+      "total_records": 20,
+      "distinct_keys": 20
+    },
+    "Machine_pk_uniqueness": {
+      "passed": true,
+      "total_records": 28,
+      "distinct_keys": 28
+    },
+    "Shift_pk_uniqueness": {
+      "passed": true,
+      "total_records": 3,
+      "distinct_keys": 3
+    },
+    "Tariff_pk_uniqueness": {
+      "passed": true,
+      "total_records": 4,
+      "distinct_keys": 4
+    },
+    "WeatherObservation_pk_uniqueness": {
+      "passed": true,
+      "total_records": 2160,
+      "distinct_keys": 2160
+    },
+    "ProductionBatch_pk_uniqueness": {
+      "passed": true,
+      "total_records": 2000,
+      "distinct_keys": 2000
+    },
+    "MaintenanceEvent_pk_uniqueness": {
+      "passed": true,
+      "total_records": 15,
+      "distinct_keys": 15
+    },
+    "Recommendation_pk_uniqueness": {
+      "passed": true,
+      "total_records": 13,
+      "distinct_keys": 13
+    },
+    "EnergyReading_pk_uniqueness": {
+      "passed": true,
+      "total_records": 172789,
+      "distinct_keys": 172789
+    },
+    "foreign_key_integrity": {
+      "passed": true,
+      "invalid_machine_meter_fk": 0,
+      "invalid_batch_machine_fk": 0,
+      "invalid_reading_meter_fk": 0
+    },
+    "savings_calculation_accuracy": {
+      "passed": true,
+      "recommendations_audited": 13,
+      "rule": "0.05 <= (expected_savings_usd / expected_savings_kwh) <= 0.35"
+    }
+  },
+  "errors": []
+}
