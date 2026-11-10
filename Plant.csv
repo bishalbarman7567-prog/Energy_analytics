@@ -1,0 +1,2 @@
+plant_id,plant_name,timezone,location_city,status,effective_from
+PLANT-001,Riverbend Manufacturing Plant,America/Chicago,Springfield,active,2020-01-01

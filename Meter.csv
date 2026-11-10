@@ -1,0 +1,21 @@
+meter_id,plant_id,meter_name,meter_type,unit_power,unit_energy,sampling_interval_min,install_date,retire_date,status
+MTR-PLANT-001-001,PLANT-001,Meter 001,main,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-002,PLANT-001,Meter 002,feeder,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-003,PLANT-001,Meter 003,feeder,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-004,PLANT-001,Meter 004,feeder,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-005,PLANT-001,Meter 005,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-006,PLANT-001,Meter 006,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-007,PLANT-001,Meter 007,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-008,PLANT-001,Meter 008,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-009,PLANT-001,Meter 009,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-010,PLANT-001,Meter 010,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-011,PLANT-001,Meter 011,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-012,PLANT-001,Meter 012,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-013,PLANT-001,Meter 013,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-014,PLANT-001,Meter 014,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-015,PLANT-001,Meter 015,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-016,PLANT-001,Meter 016,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-017,PLANT-001,Meter 017,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-018,PLANT-001,Meter 018,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-019,PLANT-001,Meter 019,sub,kW,kWh,15,2023-01-01,,active
+MTR-PLANT-001-020,PLANT-001,Meter 020,sub,kW,kWh,15,2023-01-01,,active

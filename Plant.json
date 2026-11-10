@@ -1,0 +1,10 @@
+[
+  {
+    "plant_id": "PLANT-001",
+    "plant_name": "Riverbend Manufacturing Plant",
+    "timezone": "America/Chicago",
+    "location_city": "Springfield",
+    "status": "active",
+    "effective_from": "2020-01-01"
+  }
+]
