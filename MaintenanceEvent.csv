@@ -1,0 +1,15 @@
+maintenance_id,plant_id,machine_id,event_type,start_ts,end_ts,description,impact
+MNT-MCH-PLANT-001-002-001,PLANT-001,MCH-PLANT-001-002,preventive,2026-01-21T14:00:00-06:00,2026-01-21T20:00:00-06:00,Scheduled/service maintenance activity,none
+MNT-MCH-PLANT-001-006-002,PLANT-001,MCH-PLANT-001-006,inspection,2026-03-22T14:00:00-06:00,2026-03-22T18:00:00-06:00,Scheduled/service maintenance activity,reduced_output
+MNT-MCH-PLANT-001-007-003,PLANT-001,MCH-PLANT-001-007,corrective,2026-01-26T14:00:00-06:00,2026-01-26T18:00:00-06:00,Scheduled/service maintenance activity,reduced_output
+MNT-MCH-PLANT-001-011-004,PLANT-001,MCH-PLANT-001-011,preventive,2026-01-26T06:00:00-06:00,2026-01-26T10:00:00-06:00,Scheduled/service maintenance activity,downtime
+MNT-MCH-PLANT-001-012-005,PLANT-001,MCH-PLANT-001-012,inspection,2026-01-15T22:00:00-06:00,2026-01-16T04:00:00-06:00,Scheduled/service maintenance activity,none
+MNT-MCH-PLANT-001-013-006,PLANT-001,MCH-PLANT-001-013,preventive,2026-03-05T14:00:00-06:00,2026-03-05T18:00:00-06:00,Scheduled/service maintenance activity,none
+MNT-MCH-PLANT-001-014-007,PLANT-001,MCH-PLANT-001-014,corrective,2026-03-16T22:00:00-06:00,2026-03-17T00:00:00-06:00,Scheduled/service maintenance activity,none
+MNT-MCH-PLANT-001-016-008,PLANT-001,MCH-PLANT-001-016,preventive,2026-02-13T14:00:00-06:00,2026-02-13T20:00:00-06:00,Scheduled/service maintenance activity,reduced_output
+MNT-MCH-PLANT-001-017-009,PLANT-001,MCH-PLANT-001-017,corrective,2026-02-04T14:00:00-06:00,2026-02-04T22:00:00-06:00,Scheduled/service maintenance activity,reduced_output
+MNT-MCH-PLANT-001-020-010,PLANT-001,MCH-PLANT-001-020,inspection,2026-03-19T14:00:00-06:00,2026-03-19T20:00:00-06:00,Scheduled/service maintenance activity,downtime
+MNT-MCH-PLANT-001-022-011,PLANT-001,MCH-PLANT-001-022,preventive,2026-02-17T22:00:00-06:00,2026-02-18T00:00:00-06:00,Scheduled/service maintenance activity,none
+MNT-MCH-PLANT-001-023-012,PLANT-001,MCH-PLANT-001-023,corrective,2026-03-07T06:00:00-06:00,2026-03-07T14:00:00-06:00,Scheduled/service maintenance activity,none
+MNT-MCH-PLANT-001-025-013,PLANT-001,MCH-PLANT-001-025,corrective,2026-01-18T06:00:00-06:00,2026-01-18T14:00:00-06:00,Scheduled/service maintenance activity,reduced_output
+MNT-MCH-PLANT-001-026-014,PLANT-001,MCH-PLANT-001-026,preventive,2026-02-22T14:00:00-06:00,2026-02-22T18:00:00-06:00,Scheduled/service maintenance activity,reduced_output

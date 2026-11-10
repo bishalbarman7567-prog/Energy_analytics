@@ -1,0 +1,142 @@
+[
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-002-001",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-002",
+    "event_type": "preventive",
+    "start_ts": "2026-01-21T14:00:00-06:00",
+    "end_ts": "2026-01-21T20:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "none"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-006-002",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-006",
+    "event_type": "inspection",
+    "start_ts": "2026-03-22T14:00:00-06:00",
+    "end_ts": "2026-03-22T18:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "reduced_output"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-007-003",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-007",
+    "event_type": "corrective",
+    "start_ts": "2026-01-26T14:00:00-06:00",
+    "end_ts": "2026-01-26T18:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "reduced_output"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-011-004",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-011",
+    "event_type": "preventive",
+    "start_ts": "2026-01-26T06:00:00-06:00",
+    "end_ts": "2026-01-26T10:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "downtime"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-012-005",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-012",
+    "event_type": "inspection",
+    "start_ts": "2026-01-15T22:00:00-06:00",
+    "end_ts": "2026-01-16T04:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "none"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-013-006",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-013",
+    "event_type": "preventive",
+    "start_ts": "2026-03-05T14:00:00-06:00",
+    "end_ts": "2026-03-05T18:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "none"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-014-007",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-014",
+    "event_type": "corrective",
+    "start_ts": "2026-03-16T22:00:00-06:00",
+    "end_ts": "2026-03-17T00:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "none"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-016-008",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-016",
+    "event_type": "preventive",
+    "start_ts": "2026-02-13T14:00:00-06:00",
+    "end_ts": "2026-02-13T20:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "reduced_output"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-017-009",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-017",
+    "event_type": "corrective",
+    "start_ts": "2026-02-04T14:00:00-06:00",
+    "end_ts": "2026-02-04T22:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "reduced_output"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-020-010",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-020",
+    "event_type": "inspection",
+    "start_ts": "2026-03-19T14:00:00-06:00",
+    "end_ts": "2026-03-19T20:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "downtime"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-022-011",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-022",
+    "event_type": "preventive",
+    "start_ts": "2026-02-17T22:00:00-06:00",
+    "end_ts": "2026-02-18T00:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "none"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-023-012",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-023",
+    "event_type": "corrective",
+    "start_ts": "2026-03-07T06:00:00-06:00",
+    "end_ts": "2026-03-07T14:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "none"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-025-013",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-025",
+    "event_type": "corrective",
+    "start_ts": "2026-01-18T06:00:00-06:00",
+    "end_ts": "2026-01-18T14:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "reduced_output"
+  },
+  {
+    "maintenance_id": "MNT-MCH-PLANT-001-026-014",
+    "plant_id": "PLANT-001",
+    "machine_id": "MCH-PLANT-001-026",
+    "event_type": "preventive",
+    "start_ts": "2026-02-22T14:00:00-06:00",
+    "end_ts": "2026-02-22T18:00:00-06:00",
+    "description": "Scheduled/service maintenance activity",
+    "impact": "reduced_output"
+  }
+]
